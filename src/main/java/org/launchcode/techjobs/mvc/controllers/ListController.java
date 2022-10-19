@@ -18,10 +18,13 @@ import java.util.HashMap;
 @Controller
 @RequestMapping(value = "list")
 public class ListController {
-
+/** in the view, its View Jobs By: (either list or search) This is the list controller.
+ * */
     static HashMap<String, String> columnChoices = new HashMap<>();
     static HashMap<String, Object> tableChoices = new HashMap<>();
 
+
+    /**constructor populates columnChoices and tableChoices with values*/
     public ListController () {
         columnChoices.put("all", "All");
         columnChoices.put("employer", "Employer");
@@ -47,7 +50,7 @@ public class ListController {
         return "list";
     }
 
-    @GetMapping(value = "jobs")
+    @GetMapping(value = "jobs")/**???3. is this route /list/jobs ?*/
     public String listJobsByColumnAndValue(Model model, @RequestParam String column, @RequestParam(required = false) String value) {
         ArrayList<Job> jobs;
         if (column.equals("all")){

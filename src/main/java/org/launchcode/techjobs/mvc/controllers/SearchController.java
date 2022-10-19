@@ -10,7 +10,7 @@ import static org.launchcode.techjobs.mvc.controllers.ListController.columnChoic
 
 /**
  * Created by LaunchCode
- */
+ renders the form defined in the search.html template*/
 @Controller
 @RequestMapping("search")
 public class SearchController {

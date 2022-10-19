@@ -18,6 +18,8 @@ import java.util.List;
  * Created by LaunchCode
  */
 public class JobData {
+    /**The JobData class serves the same purpose as before—it reads data from the job_data.csv file
+     * and stores it in a format we can use. In this case, that format is an ArrayList of Job objects. */
 
     private static final String DATA_FILE = "job_data.csv";
     private static boolean isDataLoaded = false;
@@ -34,7 +36,7 @@ public class JobData {
      */
 
     public static ArrayList<Job> findAll() {
-
+/** ????1. ArrayList type Job as a method. Do I need a Job type ArrayList as a field to make an ArrayList method?*/
         // load data, if not already loaded
         loadData();
 
@@ -60,7 +62,8 @@ public class JobData {
         ArrayList<Job> jobs = new ArrayList<>();
 
         if (value.toLowerCase().equals("all")){
-            return findAll();
+            return findAll(); /**findAll is the previous method you just made up there^ ????2 what is the value its taking in?
+             can it take in a column and a value at the same time? */
         }
 
         if (column.equals("all")){
