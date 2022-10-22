@@ -11,31 +11,32 @@
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
     <!-- TODO #1 - Use a loop to display job results in a table. -->
+<!--    class="table table-striped table-bordered"*/-->
 
-    <table class="job-listing"  class="table table-striped table-bordered" th:each="job : ${jobs}">
+    <table class="job-listing" th:each="job : ${jobs}">
         <tr>
             <th>ID</th>
-            <td th:text="${job.getId}"></td>
+            <td th:text="${job.id}"></td>
         </tr>
         <tr>
             <th>Name</th>
-            <td th:text="${job.getName}"></td>
+            <td th:text="${job.name}"></td>
         </tr>
         <tr>
             <th>Employer</th>
-            <td th:text="${job.getEmployer}"></td>
+            <td th:text="${job.employer}"></td>
         </tr>
         <tr>
             <th>Location</th>
-            <td th:text="${job.getLocation}"></td>
+            <td th:text="${job.location}"></td>
         </tr>
         <tr>
             <th>Position</th>
-            <td th:text="${job.getPositionType}"></td>
+            <td th:text="${job.positionType}"></td>
         </tr>
         <tr>
             <th>Skills</th>
-            <td th:text="${job.getCoreCompetency}"></td>
+            <td th:text="${job.coreCompetency}"></td>
         </tr>
     </table>
 
@@ -45,33 +46,5 @@
 </html>
 
 
-<!--        <tr>-->
-<!--            <td>ID</td>-->
-<!--            <td th:text = "${job.id}"></td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th>Employer</th>-->
-<!--            <td th:text = "${employer.id}"></td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th>Location</th>-->
-<!--            <td th:text = "${location.id}"></td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th>Position</th>-->
-<!--            <td th:text = "${job.positionType}"></td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th>Skill</th>-->
-<!--            <td th:text = "${job.coreCompetency}"></td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-            <!-- TODO #2: Complete the View Jobs By Category Table. this code below is them, its fine, leave it vvvvvv-->
-<!--            <td th:each="category : ${tableChoices}">-->
-<!--                <ul>-->
-<!--                    <li th:each="item : ${category.value}">-->
-<!--                        <a th:href="@{/list/jobs(column=${category.key},value=${item})}" th:text="${item}"></a>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </td>-->
-<!--        </tr>-->
+
+
