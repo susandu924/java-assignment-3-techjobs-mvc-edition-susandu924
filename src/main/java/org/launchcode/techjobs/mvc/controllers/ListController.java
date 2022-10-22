@@ -35,7 +35,7 @@ public class ListController {
         columnChoices.put("positionType", "Position Type");
         columnChoices.put("coreCompetency", "Skill");
 
-//        tableChoices is a hashmap that takes a (String, Object)
+//        tableChoices is a hashmap that takes a (String, Object) add to push
         tableChoices.put("all", "All");
 
         tableChoices.put("employer", JobData.getAllEmployers());
