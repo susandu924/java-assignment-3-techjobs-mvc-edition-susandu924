@@ -34,17 +34,17 @@ public class SearchController {
 //    two other parameters, specifying the type of search and the search term.
 //In order for these last two parameters to be properly passed in by Spring Boot, you need to use the correct annotation.
 // Also, you need to name them appropriately, based on the corresponding form field names defined in search.html.
-    public String displaySearchResults(Model model, @RequestParam String searchTerm, ListController columnChoices) {
+    public String displaySearchResults(Model model, @RequestParam String searchType, @RequestParam String searchTerm) {
 
         ArrayList<Job> jobs;
-        if (columnChoices.equals("all") || searchTerm == null) {
+//        model.addAttribute("jobs", jobs);
+        if (searchType.equals("all") && searchTerm == "") {
             jobs = JobData.findAll();
-            model.addAttribute("jobs", jobs);
+            return "search";
         } else {
-            jobs = JobData.findByColumnAndValue(column, value);
+            jobs = JobData.findByColumnAndValue(columnChoices.toString(), searchTerm);
         }
-        model.addAttribute("columns", columnChoices);
-            return "search/results";
+        return "search";
 
     }
 }
