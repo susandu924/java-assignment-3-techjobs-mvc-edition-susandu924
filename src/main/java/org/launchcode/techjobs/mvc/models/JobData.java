@@ -30,6 +30,10 @@ public class JobData {
     private static ArrayList<PositionType> allPositionTypes = new ArrayList<>();
     private static ArrayList<CoreCompetency> allCoreCompetency = new ArrayList<>();
 
+    public static ArrayList<Job> getAllJobs() {
+        return allJobs;
+    }
+
     /**
      * Fetch list of all job objects from loaded data,
      * without duplicates, then return a copy.

@@ -35,8 +35,8 @@ public class ListController {
         columnChoices.put("positionType", "Position Type");
         columnChoices.put("coreCompetency", "Skill");
 
-//        tableChoices is a hashmap that takes a (String, Object) add to push
-        tableChoices.put("all", "All");
+//        tableChoices is a hashmap that takes a (String, Object) add to push, the second part of parameters is correct!"All" leave it!
+        tableChoices.put("all", "View All");
 
         tableChoices.put("employer", JobData.getAllEmployers());
         tableChoices.put("location", JobData.getAllLocations());
@@ -46,7 +46,6 @@ public class ListController {
 
     @GetMapping(value = "")
     public String list(Model model) {
-
         model.addAttribute("columns", columnChoices);
         model.addAttribute("tableChoices", tableChoices);
         model.addAttribute("employers", JobData.getAllEmployers());
