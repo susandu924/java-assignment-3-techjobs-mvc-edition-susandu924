@@ -38,7 +38,8 @@ public class SearchController {
             jobs = JobData.findAll();
             return "search";
         } else {
-            jobs = JobData.findByColumnAndValue(columnChoices.toString(), searchTerm);
+            jobs = JobData.findByColumnAndValue(searchType, searchTerm);
+//            find by column and value is an arraylist
         }
         return "search";
 
