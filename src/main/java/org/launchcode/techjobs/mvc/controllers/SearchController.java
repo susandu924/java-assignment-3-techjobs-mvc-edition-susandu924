@@ -43,6 +43,7 @@ public class SearchController {
 //            find by column and value is an arraylist
         }
         model.addAttribute("jobs", jobs);
+        model.addAttribute("columns", columnChoices);
         return "search";
 
     }
