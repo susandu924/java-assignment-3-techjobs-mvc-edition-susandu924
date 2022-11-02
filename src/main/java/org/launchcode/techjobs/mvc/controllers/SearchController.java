@@ -37,10 +37,18 @@ public class SearchController {
         if (searchType.equals("all") || Objects.equals(searchTerm, ""))
         {
             jobs = JobData.findAll();
-        } else {
+        }
+//        if
+//        (searchTerm.contains(null));
+////        jobData.findExistingObject
+//        {
+//            return "Job does not exist";
+//        }
+
+         else {
             jobs = JobData.findByColumnAndValue(searchType, searchTerm);
 
-//            find by column and value is an arraylist
+//     find by column and value is an arraylist
         }
         model.addAttribute("jobs", jobs);
         model.addAttribute("columns", columnChoices);
