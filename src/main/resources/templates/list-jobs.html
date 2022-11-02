@@ -13,34 +13,34 @@
     <!-- TODO #1 - Use a loop to display job results in a table. -->
 <!--    class="table table-striped table-bordered"*/-->
 
-    <table class="job-listing" th:each="job : ${jobs}">
+    <table th:fragment = "results" class="job-listing" th:each="job : ${jobs}">
         <tr>
-            <td th:text="ID"></td>
+            <td>ID</td>
             <td th:text="${job.id}"></td>
         </tr>
         <tr>
-            <td th:text="Name"></td>
+            <td>Name</td>
             <td th:text="${job.name}"></td>
         </tr>
         <tr>
-            <td th:text="Employer"></td>
+            <td>Employer</td>
             <td th:text="${job.employer}"></td>
         </tr>
         <tr>
-            <td th:text="Location"></td>
+            <td>Location</td>
             <td th:text="${job.location}"></td>
         </tr>
         <tr>
-            <td th:text="Position"></td>
+            <td>Position</td>
             <td th:text="${job.positionType}"></td>
         </tr>
         <tr>
-            <td th:text="Skills"></td>
+            <td>Skills</td>
             <td th:text="${job.coreCompetency}"></td>
         </tr>
     </table>
-
 </div>
+
 
 </body>
 </html>
