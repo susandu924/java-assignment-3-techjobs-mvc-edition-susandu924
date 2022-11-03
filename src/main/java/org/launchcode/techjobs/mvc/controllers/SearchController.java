@@ -34,16 +34,14 @@ public class SearchController {
     public String displaySearchResults(Model model, @RequestParam String searchType, @RequestParam String searchTerm) {
         ArrayList<Job> jobs;
 
-        if (searchType.equals("all") || Objects.equals(searchTerm, ""))
+        if (searchTerm.equals("all") || Objects.equals(searchTerm, ""))
         {
             jobs = JobData.findAll();
         }
 //        if
-//        (searchTerm.contains(null));
-////        jobData.findExistingObject
-//        {
-//            return "Job does not exist";
-//        }
+//        (searchType.equals("all") && searchTerm.equals()){
+//    jobs = jobData.findExistingObject()
+////            find the jobs with the search term
 
          else {
             jobs = JobData.findByColumnAndValue(searchType, searchTerm);
